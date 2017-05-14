@@ -53,13 +53,13 @@ open class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteC
         
     }
     
-    func configureWith(ViewModel vm: SwipeToDeleteCellVM) {
+    open func configureWith(ViewModel vm: SwipeToDeleteCellVM) {
         for button in self.swipeToDeleteButtons {
             self.subscriptions.append(button.rx.tap.map { _ in return button.data.actionId } .bind(to: vm.swipeToDeleteActionsObserver))
         }
     }
     
-    public func setButtonsArray() {
+    open func setButtonsArray() {
         let deleteButton = SwipeToDeleteButton(data: SwipeToDeleteButtonData(width: 70, color: UIColor.red, title: "DELETE", font: UIFont.boldSystemFont(ofSize: 12), actionId: "delete"))
         self.swipeToDeleteButtons = [deleteButton]
     }

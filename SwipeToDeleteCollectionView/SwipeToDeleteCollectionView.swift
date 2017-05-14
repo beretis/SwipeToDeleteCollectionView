@@ -9,14 +9,14 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-public class SwipeToDeleteCollectionView: UICollectionView {
+open class SwipeToDeleteCollectionView: UICollectionView {
     var deleteModeGR: UIPanGestureRecognizer = UIPanGestureRecognizer()
     var cancelDeleteModeTapGR: UITapGestureRecognizer = UITapGestureRecognizer()
     var dragingCellIndexPath: IndexPath?
     var disposeBag: DisposeBag = DisposeBag()
     
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         self.setupGestureRecognizer()
     }
     
@@ -62,7 +62,7 @@ public class SwipeToDeleteCollectionView: UICollectionView {
 }
 
 extension SwipeToDeleteCollectionView: UIGestureRecognizerDelegate {
-    override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         guard gestureRecognizer != self.cancelDeleteModeTapGR else {
             return true
         }

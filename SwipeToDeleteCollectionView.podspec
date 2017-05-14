@@ -6,7 +6,7 @@ s.name = "SwipeToDeleteCollectionView"
 s.summary = "Collection View which support swipe to delete function of TableView"
 s.requires_arc = true
 
-s.version = "0.1.0"
+s.version = "0.1.1"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 

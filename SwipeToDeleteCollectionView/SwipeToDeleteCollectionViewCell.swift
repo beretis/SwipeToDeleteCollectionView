@@ -13,12 +13,12 @@ public protocol SwipeToDeleteCellAble {
     func setButtonsArray()
 }
 
-public class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAble {
+open class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAble {
     
     public var swipeToDeleteButtons: [SwipeToDeleteButton] = []
     var subscriptions: [Disposable] = []
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         self.setButtonsArray()
         self.createDeleteView()
@@ -32,7 +32,7 @@ public class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDelet
         super.init(coder: aDecoder)
     }
     
-    override public func prepareForReuse() {
+    override open func prepareForReuse() {
         for subscription in subscriptions {
             subscription.dispose()
         }
@@ -101,7 +101,7 @@ public class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDelet
     
 }
 
-public class SwipeToDeleteButton: UIButton {
+open class SwipeToDeleteButton: UIButton {
     
     var data: SwipeToDeleteButtonData
     
@@ -118,7 +118,7 @@ public class SwipeToDeleteButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return false
     }
 }

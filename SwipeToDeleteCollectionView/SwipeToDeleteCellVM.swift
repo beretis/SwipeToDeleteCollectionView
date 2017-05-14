@@ -15,3 +15,4 @@ public typealias SwipeToDeleteActionID = String
 public protocol SwipeToDeleteCellVM {
     var swipeToDeleteActionsObserver: AnyObserver<SwipeToDeleteActionID> { get set }
 }
+

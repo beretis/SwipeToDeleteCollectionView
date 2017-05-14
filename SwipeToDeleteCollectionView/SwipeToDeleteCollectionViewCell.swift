@@ -105,7 +105,7 @@ open class SwipeToDeleteButton: UIButton {
     
     var data: SwipeToDeleteButtonData
     
-    required public init(data: SwipeToDeleteButtonData) {
+    public init(data: SwipeToDeleteButtonData) {
         self.data = data
         super.init(frame: CGRect.zero)
         self.backgroundColor = data.color
@@ -129,5 +129,13 @@ public struct SwipeToDeleteButtonData {
     var title: String
     var font: UIFont
     var actionId: String
+    
+    public init(width: Int, color: UIColor, title: String, font: UIFont, actionId: SwipeToDeleteActionID) {
+        self.width = width
+        self.color = color
+        self.title = title
+        self.font = font
+        self.actionId = actionId
+    }
 }
 

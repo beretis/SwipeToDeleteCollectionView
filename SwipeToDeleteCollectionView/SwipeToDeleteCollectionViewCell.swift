@@ -8,17 +8,17 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-protocol SwipeToDeleteCellAble {
+public protocol SwipeToDeleteCellAble {
     var swipeToDeleteButtons: [SwipeToDeleteButton] { get set }
     func setButtonsArray()
 }
 
-class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAble {
+public class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAble {
     
-    var swipeToDeleteButtons: [SwipeToDeleteButton] = []
+    public var swipeToDeleteButtons: [SwipeToDeleteButton] = []
     var subscriptions: [Disposable] = []
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         self.setButtonsArray()
         self.createDeleteView()
@@ -28,11 +28,11 @@ class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAb
         super.init(frame: frame)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
-    override func prepareForReuse() {
+    override public func prepareForReuse() {
         for subscription in subscriptions {
             subscription.dispose()
         }
@@ -59,7 +59,7 @@ class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAb
         }
     }
     
-    func setButtonsArray() {
+    public func setButtonsArray() {
         let deleteButton = SwipeToDeleteButton(data: SwipeToDeleteButtonData(width: 70, color: UIColor.red, title: "DELETE", font: UIFont.boldSystemFont(ofSize: 12), actionId: "delete"))
         self.swipeToDeleteButtons = [deleteButton]
     }
@@ -101,11 +101,11 @@ class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAb
     
 }
 
-class SwipeToDeleteButton: UIButton {
+public class SwipeToDeleteButton: UIButton {
     
     var data: SwipeToDeleteButtonData
     
-    required init(data: SwipeToDeleteButtonData) {
+    required public init(data: SwipeToDeleteButtonData) {
         self.data = data
         super.init(frame: CGRect.zero)
         self.backgroundColor = data.color
@@ -114,16 +114,16 @@ class SwipeToDeleteButton: UIButton {
         self.titleLabel?.font = data.font
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         return false
     }
 }
 
-struct SwipeToDeleteButtonData {
+public struct SwipeToDeleteButtonData {
     var width: Int
     var color: UIColor
     var title: String

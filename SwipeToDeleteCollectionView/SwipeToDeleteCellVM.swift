@@ -10,8 +10,8 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-typealias SwipeToDeleteActionID = String
+public typealias SwipeToDeleteActionID = String
 
-protocol SwipeToDeleteCellVM {
+public protocol SwipeToDeleteCellVM {
     var swipeToDeleteActionsObserver: AnyObserver<SwipeToDeleteActionID> { get set }
 }

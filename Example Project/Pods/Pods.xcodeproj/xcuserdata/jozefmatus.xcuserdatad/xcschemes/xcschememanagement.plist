@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-CollectionViewSwipeToDelete.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxDataSources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwipeToDeleteCollectionView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1493FC884463F2764E5C3105557AAED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3917CF0168D1E182DF873400DEE165D5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70366B1FF2A2DC063B39D05E982D5D2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AA0A95D0E2C2F4BC0EEE85BF447A893E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D6644BE69375B5EEC0627843DEB9C94B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

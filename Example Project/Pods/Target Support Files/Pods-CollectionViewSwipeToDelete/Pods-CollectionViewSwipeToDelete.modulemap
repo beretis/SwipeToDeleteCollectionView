@@ -1,0 +1,6 @@
+framework module Pods_CollectionViewSwipeToDelete {
+  umbrella header "Pods-CollectionViewSwipeToDelete-umbrella.h"
+
+  export *
+  module * { export * }
+}

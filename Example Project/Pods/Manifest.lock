@@ -1,0 +1,24 @@
+PODS:
+  - RxCocoa (3.4.1):
+    - RxSwift (~> 3.4)
+  - RxDataSources (1.0.3):
+    - RxCocoa (~> 3.0)
+    - RxSwift (~> 3.0)
+  - RxSwift (3.4.1)
+  - SwipeToDeleteCollectionView (0.1.5):
+    - RxCocoa (~> 3.4.1)
+    - RxSwift (~> 3.4.1)
+
+DEPENDENCIES:
+  - RxDataSources
+  - SwipeToDeleteCollectionView
+
+SPEC CHECKSUMS:
+  RxCocoa: a8a5f1d061d0043e28f56976829f31ce63e8eb09
+  RxDataSources: a021a0e944ba5f7991259829d973afdbfa719c0b
+  RxSwift: 656f8fbeca5bc372121a72d9ebdd3cd3bc0ffade
+  SwipeToDeleteCollectionView: 3c429d1c1f72a79b9d7338a4b7971614182ac166
+
+PODFILE CHECKSUM: ae34700e4fa13300b166b268e9106ceead4fa99c
+
+COCOAPODS: 1.2.0

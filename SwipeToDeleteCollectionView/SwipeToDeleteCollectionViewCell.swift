@@ -11,6 +11,7 @@ import RxSwift
 public protocol SwipeToDeleteCellAble {
     var swipeToDeleteButtons: [SwipeToDeleteButton] { get set }
     func setButtonsArray()
+    func configure(WithViewModel vm: SwipeToDeleteCellVM)
 }
 
 open class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteCellAble {
@@ -53,7 +54,7 @@ open class SwipeToDeleteCollectionViewCell: UICollectionViewCell, SwipeToDeleteC
         
     }
     
-    open func configureWith(ViewModel vm: SwipeToDeleteCellVM) {
+    open func configure(WithViewModel vm: SwipeToDeleteCellVM) {
         for button in self.swipeToDeleteButtons {
             self.subscriptions.append(button.rx.tap.map { _ in return button.data.actionId } .bind(to: vm.swipeToDeleteActionsObserver))
         }

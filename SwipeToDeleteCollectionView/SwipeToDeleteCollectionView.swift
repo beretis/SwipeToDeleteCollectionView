@@ -20,6 +20,15 @@ open class SwipeToDeleteCollectionView: UICollectionView {
         self.setupGestureRecognizer()
     }
     
+    override public init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
+        super.init(frame: frame, collectionViewLayout: layout)
+        self.setupGestureRecognizer()
+    }
+    
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     private func setupGestureRecognizer() {
         deleteModeGR.delegate = self
         deleteModeGR.maximumNumberOfTouches = 1

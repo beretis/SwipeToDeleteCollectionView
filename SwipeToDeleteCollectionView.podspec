@@ -6,7 +6,7 @@ s.name = "SwipeToDeleteCollectionView"
 s.summary = "Collection View which support swipe to delete function of TableView"
 s.requires_arc = true
 
-s.version = "0.1.7"
+s.version = "0.1.9"
 
 s.license = { :type => "MIT", :file => "LICENSE" }
 
@@ -22,5 +22,7 @@ s.dependency 'RxSwift', '~> 3.4.1'
 s.dependency 'RxCocoa', '~> 3.4.1'
 
 
-s.source_files = "SwipeToDeleteCollectionView/SwipeToDeleteCollectionView/*.{swift}"
+s.source_files = "SwipeToDeleteCollectionView/SwipeToDeleteCellVM.swift"
+s.source_files = "SwipeToDeleteCollectionView/SwipeToDeleteCollectionView.swift"
+s.source_files = "SwipeToDeleteCollectionView/SwipeToDeleteCollectionViewCell.swift"
 end

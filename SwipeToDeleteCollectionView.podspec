@@ -18,8 +18,8 @@ s.source = { :git => "https://github.com/beretis/SwipeToDeleteCollectionView.git
 
 
 s.framework = "UIKit"
-s.dependency 'RxSwift', '~> 3.4.1'
-s.dependency 'RxCocoa', '~> 3.4.1'
+s.dependency 'RxSwift'
+s.dependency 'RxCocoa'
 
 
 s.source_files = "SwipeToDeleteCollectionView/SwipeToDeleteCellVM.swift"
